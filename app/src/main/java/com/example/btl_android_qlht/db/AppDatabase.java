@@ -41,7 +41,8 @@ import com.example.btl_android_qlht.db.entity.Wallet;
                 Examination.class,
                 Evaluation.class,
                 Transaction.class,
-                News.class
+                News.class,
+                User.class
         },
         version = 1,
         exportSchema = false
@@ -66,7 +67,7 @@ public abstract class AppDatabase extends RoomDatabase {
             INSTANCE = Room.databaseBuilder(
                             context.getApplicationContext(),
                             AppDatabase.class,
-                            "QLHT_db" // chỉ cần truyền tên db
+                            "QLHT_db"
                     )
                     .allowMainThreadQueries()
                     .build();
