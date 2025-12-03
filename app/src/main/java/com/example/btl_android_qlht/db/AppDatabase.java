@@ -70,7 +70,7 @@ public abstract class AppDatabase extends RoomDatabase {
             INSTANCE = Room.databaseBuilder(
                             context.getApplicationContext(),
                             AppDatabase.class,
-                            "QLHT1_db"
+                            "QLHTkhuyen_db"
                     )
                     .addCallback(seedCallback)
                     .allowMainThreadQueries()
