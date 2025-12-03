@@ -11,6 +11,9 @@ import com.example.btl_android_qlht.db.entity.ClassCourse;
 import com.example.btl_android_qlht.db.entity.Enrollment;
 
 import java.util.List;
+import androidx.room.Insert;
+
+import com.example.btl_android_qlht.db.entity.Enrollment;
 
 @Dao
 public interface EnrollmentDao {

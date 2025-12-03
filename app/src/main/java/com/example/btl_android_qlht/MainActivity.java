@@ -1,6 +1,7 @@
 package com.example.btl_android_qlht;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.btl_android_qlht.db.AppDatabase;
 import com.example.btl_android_qlht.db.User;
+import com.example.btl_android_qlht.db.entity.Teacher;
 
 import java.util.List;
 
@@ -20,16 +22,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        loadUser();
     }
 
     private void loadUser(){
         AppDatabase db = AppDatabase.getDbInstance(getApplicationContext());
-        List<User> listUser = db.userDao().getAllUsers();
-
+        List<Teacher> listUs = db.teacherDao().getAllTeachers();
+        Log.d("USER_DATA", "Danh sách giáo viên: " + listUs.toString());
     }
 }
