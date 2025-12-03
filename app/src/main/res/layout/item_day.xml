@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="4dp">
+
+    <LinearLayout
+        android:id="@+id/day_container"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_day_selected"> <TextView
+        android:id="@+id/tv_weekday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="T5"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/tv_day_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_lesson_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 2 3"
+        android:textSize="10sp"
+        android:textColor="@android:color/darker_gray"/>
+
+</LinearLayout>
