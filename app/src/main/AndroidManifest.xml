@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BTL_Android_QLHT">
         <activity
+            android:name=".TimeTableActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExamScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StudyResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

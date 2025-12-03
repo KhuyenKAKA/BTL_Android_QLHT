@@ -45,4 +45,5 @@ dependencies {
     configurations.all {
         exclude(group = "com.intellij", module = "annotations")
     }
+    implementation(libs.mpandroidchart)
 }
