@@ -3,6 +3,7 @@ package com.example.btl_android_qlht.db.entity;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "Teacher")
@@ -58,6 +59,9 @@ public class Teacher {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+    @Ignore
+    public Teacher() {
     }
 
     @Override

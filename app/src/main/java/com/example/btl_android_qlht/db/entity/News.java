@@ -4,6 +4,7 @@ package com.example.btl_android_qlht.db.entity;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "News")
@@ -56,6 +57,9 @@ public class News {
 
     public void setTime(String time) {
         this.time = time;
+    }
+    @Ignore
+    public News() {
     }
 
     @Override

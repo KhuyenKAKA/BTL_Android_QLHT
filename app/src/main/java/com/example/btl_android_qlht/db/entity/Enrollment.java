@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(
@@ -108,6 +109,9 @@ public class Enrollment {
 
     public void setGrade(String grade) {
         this.grade = grade;
+    }
+    @Ignore
+    public Enrollment() {
     }
 
     @Override

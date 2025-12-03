@@ -3,6 +3,7 @@ package com.example.btl_android_qlht.db.entity;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "Student")
@@ -139,6 +140,9 @@ public class Student {
 
     public void setCID(String CID) {
         this.CID = CID;
+    }
+    @Ignore
+    public Student() {
     }
 
     @Override
