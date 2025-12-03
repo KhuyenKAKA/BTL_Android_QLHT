@@ -1,0 +1,27 @@
+<!-- Đường dẫn: res/layout/activity_course_registration.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CourseRegistrationActivity"> <!-- Giả sử tên Activity của bạn -->
+
+    <!-- Bạn có thể thêm một Toolbar ở đây nếu muốn -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_courses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/list_item_course" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>
+    

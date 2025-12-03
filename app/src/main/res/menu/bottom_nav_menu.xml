@@ -2,14 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_home"
-        android:icon="@drawable/ic_home"
-        android:title="Trang chủ" /> <item
+
+        android:title="Trang chủ" />
+    <item
+        android:id="@+id/nav_registration"
+        android:icon="@drawable/ic_registration"
+    android:title="Đăng ký học phần" />
+    <item
     android:id="@+id/nav_settings"
-    android:icon="@drawable/ic_settings"
+
     android:title="Cài đặt" />
 
     <item
         android:id="@+id/nav_profile"
-        android:icon="@drawable/ic_person"
+
         android:title="Cá nhân" />
 </menu>

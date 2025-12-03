@@ -44,7 +44,7 @@ import com.example.btl_android_qlht.db.entity.Wallet;
                 News.class,
                 User.class
         },
-        version = 1,
+        version = 2,
         exportSchema = false
 )
 public abstract class AppDatabase extends RoomDatabase {
@@ -69,6 +69,7 @@ public abstract class AppDatabase extends RoomDatabase {
                             AppDatabase.class,
                             "QLHT_db"
                     )
+                    .fallbackToDestructiveMigration()
                     .allowMainThreadQueries()
                     .build();
         }
