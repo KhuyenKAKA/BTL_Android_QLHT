@@ -189,18 +189,17 @@ public abstract class AppDatabase extends RoomDatabase {
                         "2025-12-01 09:30"
                 ));
                 database.newsDao().insert(new News(
-                        1,
-                        "Thông báo lịch thi học kỳ 1",
-                        "Sinh viên chú ý xem lịch thi trên cổng thông tin.",
-                        "2025-12-01 09:30"
-                ));
-                database.newsDao().insert(new News(
                         2,
                         "Tuyển dụng Internship FPT Software",
                         "FPT Software mở đơn tuyển thực tập sinh cho sinh viên năm 3-4.",
                         "2025-12-03 10:15"
                 ));
-
+                database.newsDao().insert(new News(
+                        3,
+                        "Tuyển dụng Internship Samsung SRV",
+                        "Samsung SRV mở đơn tuyển thực tập sinh cho sinh viên năm 3-4.",
+                        "2025-11-07 08:30"
+                ));
             });
         }
     };
