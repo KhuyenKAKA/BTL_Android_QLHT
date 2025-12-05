@@ -132,7 +132,7 @@
                 android:layout_marginTop="24dp"
                 android:background="#EEEEEE" />
 
-            <!-- 3. SECTION THÔNG BÁO (Updated) -->
+            <!-- 3. SECTION THÔNG BÁO -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -243,11 +243,13 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
+            <!-- Kẻ ngang phân cách -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="12dp"
                 android:background="#EEEEEE" />
+            <!-- Đã sửa từ 24dp thành 12dp -->
 
             <!-- 4. SECTION TIỆN ÍCH -->
             <TextView
@@ -259,7 +261,8 @@
                 android:textStyle="bold"
                 android:textColor="#333333"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"/>
+                android:layout_marginTop="12dp"/>
+            <!-- Đã sửa từ 24dp thành 12dp -->
 
             <LinearLayout
                 android:layout_width="match_parent"
