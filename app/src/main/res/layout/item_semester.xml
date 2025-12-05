@@ -7,8 +7,8 @@
     android:layout_marginBottom="12dp"
     app:cardCornerRadius="16dp"
     app:cardElevation="2dp"
-    app:cardBackgroundColor="@android:color/white"
-    android:animateLayoutChanges="true">
+    app:cardBackgroundColor="@android:color/white">
+    <!-- ĐÃ XÓA: android:animateLayoutChanges="true" để animation trong Java hoạt động mượt hơn -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -50,8 +50,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
-        <!-- Nút mũi tên (Icon) -->
-        <!-- Đặt dưới text xếp loại -->
+        <!-- Nút mũi tên -->
         <ImageView
             android:id="@+id/img_arrow"
             android:layout_width="24dp"
@@ -63,7 +62,7 @@
             android:contentDescription="Expand Details"
             app:tint="#333333" />
 
-        <!-- Container nội dung chi tiết (Phần sẽ ẩn đi khi rút gọn) -->
+        <!-- Container nội dung chi tiết -->
         <LinearLayout
             android:id="@+id/expandable_layout"
             android:layout_width="0dp"
