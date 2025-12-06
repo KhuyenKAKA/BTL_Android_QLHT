@@ -408,6 +408,7 @@
             android:layout_weight="1"/>
 
         <TextView
+            android:id="@+id/view_profile"
             style="@style/BottomNavItemStyle"
             android:text="Cá nhân"
             android:drawableTop="@drawable/ic_person_outline"

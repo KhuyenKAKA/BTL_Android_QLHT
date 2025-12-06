@@ -40,7 +40,7 @@ public class Student {
     @ColumnInfo(name = "CID")
     public String CID;
 
-    public Student(String id, String name, String className, String dob, String faculty, String major, String address, String phoneNumber, String email, int gender, String CID) {
+    public Student(@NonNull String id, String name, String className, String dob, String faculty, String major, String address, String phoneNumber, String email, int gender, String CID) {
         this.id = id;
         this.name = name;
         this.className = className;

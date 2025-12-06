@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="80dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -151,6 +152,7 @@
                             android:text="MSSV"
                             android:textColor="@color/text_gray"/>
                         <TextView
+                            android:id="@+id/tv_mssv_value"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1.2"
@@ -170,12 +172,17 @@
                             android:layout_weight="0.8"
                             android:text="Ngày sinh"
                             android:textColor="@color/text_gray"/>
-                        <TextView
+                        <EditText
+                            android:id="@+id/edt_dob_value"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1.2"
-                            android:text="123456"
-                            android:textColor="@color/text_dark"/>
+                            android:text="12345"
+                            android:textColor="@color/text_dark"
+                            android:background="@android:color/transparent"
+                            android:enabled="false"
+                            android:inputType="text|date"
+                            android:textSize="14sp"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -190,6 +197,7 @@
                             android:text="Giới tính"
                             android:textColor="@color/text_gray"/>
                         <TextView
+                            android:id="@+id/tv_gender_value"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1.2"
@@ -239,12 +247,17 @@
                             android:layout_weight="0.8"
                             android:text="Email"
                             android:textColor="@color/text_gray"/>
-                        <TextView
+                        <EditText
+                            android:id="@+id/edt_email_value"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1.2"
-                            android:text="123456"
-                            android:textColor="@color/text_dark"/>
+                            android:text="email@hust.edu.vn"
+                            android:textColor="@color/text_dark"
+                            android:background="@android:color/transparent"
+                            android:enabled="false"
+                            android:inputType="textEmailAddress"
+                            android:textSize="14sp"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -259,12 +272,17 @@
                             android:layout_weight="0.8"
                             android:text="Số điện thoại"
                             android:textColor="@color/text_gray"/>
-                        <TextView
+                        <EditText
+                            android:id="@+id/edt_phone_value"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1.2"
-                            android:text="123456"
-                            android:textColor="@color/text_dark"/>
+                            android:text="0988xxxxxx"
+                            android:textColor="@color/text_dark"
+                            android:background="@android:color/transparent"
+                            android:enabled="false"
+                            android:inputType="phone"
+                            android:textSize="14sp"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -278,12 +296,17 @@
                             android:layout_weight="0.8"
                             android:text="Địa chỉ"
                             android:textColor="@color/text_gray"/>
-                        <TextView
+                        <EditText
+                            android:id="@+id/edt_address_value"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1.2"
-                            android:text="123456"
-                            android:textColor="@color/text_dark"/>
+                            android:text="Hà Nội"
+                            android:textColor="@color/text_dark"
+                            android:background="@android:color/transparent"
+                            android:enabled="false"
+                            android:inputType="textPostalAddress"
+                            android:textSize="14sp"/>
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -316,14 +339,42 @@
 
                     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" android:layout_marginBottom="10dp"/>
 
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="2" android:layout_marginBottom="8dp">
-                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="Số dư ví" android:textColor="@color/text_gray"/>
-                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="1.200.000 đ" android:textColor="#4CAF50" android:textStyle="bold"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginBottom="8dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:text="Số dư ví"
+                            android:textColor="@color/text_gray"/>
+                        <TextView
+                            android:id="@+id/tv_wallet_balance"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2"
+                            android:text="1.200.000 đ"
+                            android:textColor="#4CAF50"
+                            android:textStyle="bold"/>
                     </LinearLayout>
 
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="2">
-                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="Học phí nợ" android:textColor="@color/text_gray"/>
-                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="0 đ" android:textColor="@color/text_dark"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:text="Học phí nợ"
+                            android:textColor="@color/text_gray"/>
+                        <TextView
+                            android:id="@+id/tv_wallet_debt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2"
+                            android:text="0 đ"
+                            android:textColor="@color/text_dark"/>
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

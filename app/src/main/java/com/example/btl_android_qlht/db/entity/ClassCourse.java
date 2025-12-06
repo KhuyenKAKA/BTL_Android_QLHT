@@ -38,7 +38,7 @@ public class ClassCourse {
     public int quantity;
 
 
-    public ClassCourse(String id, String name, String semesterId, String subjectId, String teacherId, String room, String startTime, String endTime, int quantity) {
+    public ClassCourse(@NonNull String id, String name, String semesterId, String subjectId, String teacherId, String room, String startTime, String endTime, int quantity) {
         this.id = id;
         this.name = name;
         this.semesterId = semesterId;
@@ -50,11 +50,12 @@ public class ClassCourse {
         this.quantity = quantity;
     }
 
+    @NonNull
     public String getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(@NonNull String id) {
         this.id = id;
     }
 
@@ -125,6 +126,7 @@ public class ClassCourse {
     public ClassCourse() {
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "ClassCourse{" +

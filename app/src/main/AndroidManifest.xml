@@ -30,8 +30,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.CourseRegistrationActivity"
-            android:exported="false" />
+            android:name=".FinanceActivity"
+            android:exported="false">
+        </activity>
+        <activity android:name=".ViewInformationActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BTL_Android_QLHT.WithActionBar">
+        </activity>
     </application>
 
 </manifest>
