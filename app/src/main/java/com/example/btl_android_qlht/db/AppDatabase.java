@@ -198,7 +198,7 @@ public abstract class AppDatabase extends RoomDatabase {
                         3,
                         "Tuyển dụng Internship Samsung SRV",
                         "Samsung SRV mở đơn tuyển thực tập sinh cho sinh viên năm 3-4.",
-                        "2025-11-07 08:30"
+                        "2025-12-03 08:30"
                 ));
             });
         }

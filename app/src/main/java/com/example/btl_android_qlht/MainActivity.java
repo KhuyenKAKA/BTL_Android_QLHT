@@ -89,5 +89,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             });
         }
+
+        LinearLayout navSettings = findViewById(R.id.nav_settings);
+        if (navSettings != null) {
+            navSettings.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                // Flag để tránh tạo activity chồng chéo
+                intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent);
+                overridePendingTransition(0, 0); // Tắt hiệu ứng chuyển cảnh
+            });
+        }
     }
 }

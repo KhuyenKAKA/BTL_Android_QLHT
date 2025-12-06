@@ -90,6 +90,8 @@
                         app:layout_constraintStart_toEndOf="@id/calendar_illustration"
                         app:layout_constraintTop_toTopOf="parent" />
 
+
+
                     <TextView
                         android:id="@+id/date_text"
                         android:layout_width="wrap_content"
@@ -106,8 +108,7 @@
                         android:id="@+id/no_schedule_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Không có lịch! Xem thêm TKB"
-                        android:textSize="14sp"
+                        android:text="@string/schedule_view_more"  android:textSize="14sp"
                         android:textColor="#FF4081"
                         android:layout_marginTop="8dp"
                         app:layout_constraintStart_toStartOf="@id/schedule_title"
@@ -147,7 +148,7 @@
                     android:text="Thông báo gần đây"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="#333333"
+                    android:textColor="@color/blue_primary"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent" />
@@ -156,15 +157,16 @@
                     android:id="@+id/view_all_notifications"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Xem thêm"
+                    android:text="@string/news_view_more"
                     android:textSize="14sp"
-                    android:textColor="#2196F3"
+                    android:textColor="@color/blue_primary"
                     android:clickable="true"
                     android:focusable="true"
                     android:background="?attr/selectableItemBackground"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <!-- THẺ THÔNG BÁO TĨNH (Single CardView) -->
@@ -259,7 +261,7 @@
                 android:text="Tiện ích"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:textColor="#333333"
+                android:textColor="@color/blue_primary"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="12dp"/>
             <!-- Đã sửa từ 24dp thành 12dp -->
@@ -433,23 +435,77 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:elevation="8dp">
 
-        <TextView
-            style="@style/BottomNavItemStyle"
-            android:text="Trang chủ"
-            android:textColor="#1E88E5"
-            android:drawableTop="@drawable/ic_home_filled"
-            android:layout_weight="1"/>
+        <!-- Tab Trang chủ -->
+        <LinearLayout
+            android:id="@+id/nav_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home_filled"
+                app:tint="#1E88E5"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trang chủ"
+                android:textSize="12sp"
+                android:textColor="#1E88E5"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
 
-        <TextView
-            style="@style/BottomNavItemStyle"
-            android:text="Cài đặt"
-            android:drawableTop="@drawable/ic_settings_outline"
-            android:layout_weight="1"/>
+        <!-- Tab Cài đặt (ĐÃ THÊM ID: @+id/nav_settings) -->
+        <LinearLayout
+            android:id="@+id/nav_settings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_settings_outline"
+                app:tint="#999999"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cài đặt"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
 
-        <TextView
-            style="@style/BottomNavItemStyle"
-            android:text="Cá nhân"
-            android:drawableTop="@drawable/ic_person_outline"
-            android:layout_weight="1"/>
+        <!-- Tab Cá nhân -->
+        <LinearLayout
+            android:id="@+id/nav_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_person_outline"
+                app:tint="#999999"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cá nhân"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
